@@ -47,9 +47,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "nikhil.ghige@example.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Location", value: "City, Country" },
+    { icon: Mail, label: "Email", value: "nikhil.ghige23@pcu.edu.in" },
+    { icon: Phone, label: "Phone", value: "+91 999999999" },
+    { icon: MapPin, label: "Location", value: "Pune, India" },
   ];
 
   return (
