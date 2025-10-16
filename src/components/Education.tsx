@@ -6,14 +6,14 @@ const Education = () => {
     {
       degree: "Bachelor of Technology",
       field: "Computer Science & Engineering",
-      institution: "University Name",
+      institution: "PCCOE - Pimpri Chinchwad College Of Engineering",
       period: "2019 - 2023",
       description: "Focused on software development, algorithms, and data structures.",
     },
     {
       degree: "Higher Secondary Certificate",
       field: "Science Stream",
-      institution: "High School Name",
+      institution: "SNBP",
       period: "2017 - 2019",
       description: "Specialized in Mathematics, Physics, and Computer Science.",
     },
