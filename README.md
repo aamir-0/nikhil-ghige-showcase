@@ -62,3 +62,86 @@ This is a React + Vite + TypeScript project using shadcn-ui and Tailwind CSS.
 - TypeScript
 - shadcn-ui
 - Tailwind CSS
+
+## Host this project on your own GitHub Pages
+
+You can publish this project on your own GitHub Pages in two supported ways. Before deploying, update the configuration to match your GitHub username and repository name.
+
+### 0) Update configuration (required)
+
+1. Set the correct homepage in `package.json`:
+	```json
+	{
+	  "homepage": "https://<your-username>.github.io/<your-repo-name>"
+	}
+	```
+
+2. Set the correct base path in `vite.config.ts` (must match your repo name):
+	```ts
+	export default defineConfig(({ mode }) => ({
+	  base: "/<your-repo-name>/",
+	  // ...existing config...
+	}));
+	```
+
+3. Routing: This project uses `HashRouter`, which works out of the box on GitHub Pages and avoids 404s on refresh. If you switch to `BrowserRouter`, you must add a `404.html` that serves `index.html` to handle SPA routing on GitHub Pages.
+
+### Option A: Deploy to a `gh-pages` branch (recommended)
+
+1. Install the deploy tool (already added here, repeat if needed):
+	```powershell
+	npm install gh-pages --save-dev
+	```
+
+2. Ensure these scripts exist in `package.json`:
+	```json
+	{
+	  "scripts": {
+		 "predeploy": "npm run build",
+		 "deploy": "gh-pages -d dist"
+	  }
+	}
+	```
+
+3. Build and publish:
+	```powershell
+	npm run deploy
+	```
+
+4. In GitHub → Settings → Pages:
+	- Source: Deploy from a branch
+	- Branch: `gh-pages`, Folder: `/ (root)`
+
+Your site will be at: `https://<your-username>.github.io/<your-repo-name>/`
+
+### Option B: Publish from `main` using `/docs` folder
+
+1. Build the site into `docs/`:
+	```powershell
+	npm run build:docs
+	```
+
+2. Commit and push the `docs/` folder to `main`:
+	```powershell
+	git add docs
+	git commit -m "build: publish to docs for GitHub Pages"
+	git push origin main
+	```
+
+3. In GitHub → Settings → Pages:
+	- Source: Deploy from a branch
+	- Branch: `main`, Folder: `/docs`
+
+Your site will be at: `https://<your-username>.github.io/<your-repo-name>/`
+
+### Custom domains (optional)
+
+If you use a custom domain, set `base: "/"` in `vite.config.ts`, remove the `homepage` field (or set it to your custom domain), and add a `CNAME` file at the root of the published branch containing your domain.
+
+### Quick checklist
+
+- `package.json` → `homepage` matches your URL
+- `vite.config.ts` → `base` matches your repo name (or `/` for custom domains)
+- Use `HashRouter` (already configured) to avoid SPA 404s on refresh
+- Choose one publishing method: `gh-pages` branch or `main` + `/docs`
+- After pushing/deploying, wait 1–3 minutes for Pages to update
