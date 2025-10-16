@@ -40,7 +40,7 @@ const Hero = () => {
             onClick={() =>
               document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
             }
-            className="border-white text-white hover:bg-white hover:text-primary"
+            className="border-white text-primary hover:bg-white hover:text-primary"
           >
             Get In Touch
           </Button>

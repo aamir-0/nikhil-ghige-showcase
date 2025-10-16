@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
 
-## Project info
+# nikhil-ghige-showcase
 
-**URL**: https://lovable.dev/projects/7570ec05-0ae9-4cb5-a1eb-7e4e9ff35030
+## Project Overview
 
-## How can I edit this code?
+This is a React + Vite + TypeScript project using shadcn-ui and Tailwind CSS.
 
-There are several ways of editing your application.
+## Local Development
 
-**Use Lovable**
+1. **Clone the repository:**
+	```sh
+	git clone https://github.com/aamir-0/nikhil-ghige-showcase.git
+	cd nikhil-ghige-showcase
+	```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7570ec05-0ae9-4cb5-a1eb-7e4e9ff35030) and start prompting.
+2. **Install dependencies:**
+	```sh
+	npm install
+	```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **Start the development server:**
+	```sh
+	npm run dev
+	```
+	The app will be available at [http://localhost:8080](http://localhost:8080)
 
-**Use your preferred IDE**
+## Deployment to GitHub Pages
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Build the project:**
+	```sh
+	npm run build
+	```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Deploy to GitHub Pages:**
+	```sh
+	npm run deploy
+	```
+	This will publish the `dist` folder to the `gh-pages` branch.
 
-Follow these steps:
+3. **Configure GitHub Pages:**
+	- Go to your repository on GitHub
+	- Click on **Settings** > **Pages**
+	- Set source to `gh-pages` branch, folder `/ (root)`
+	- Save and wait a few minutes
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Access your site:**
+	- Your app will be live at: [https://aamir-0.github.io/nikhil-ghige-showcase/](https://aamir-0.github.io/nikhil-ghige-showcase/)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Troubleshooting
 
-# Step 3: Install the necessary dependencies.
-npm i
+- If you see a 404 error, make sure:
+  - The `gh-pages` branch contains the built files (`index.html`, `assets/`, etc.)
+  - The `homepage` field in `package.json` is set to your GitHub Pages URL
+  - The `base` option in `vite.config.ts` is set to `/nikhil-ghige-showcase/`
+  - GitHub Pages is configured to use the `gh-pages` branch
+  - Wait a few minutes after deployment
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Technologies Used
 
 - Vite
-- TypeScript
 - React
+- TypeScript
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7570ec05-0ae9-4cb5-a1eb-7e4e9ff35030) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
