@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { assetUrl } from "@/lib/utils";
 
 interface Certificate {
   name: string;
@@ -32,8 +33,8 @@ const Certificates = () => {
       description:
         "Successfully completed a project-based course on Django migrations and full-stack development.",
       skills: ["Django", "Python", "Full-stack Development", "Database Migrations"],
-      pdfUrl: "/certificates/django-migrations.pdf",
-      thumbUrl: "/certificates/thumbs/django-migrations.jpg",
+  pdfUrl: assetUrl("certificates/django-migrations.pdf"),
+  thumbUrl: assetUrl("certificates/thumbs/django-migrations.jpg"),
       verifyUrl: "https://coursera.org/verify/Q8HCTJR04J5K",
     },
     {
@@ -43,8 +44,8 @@ const Certificates = () => {
       description:
         "Completed comprehensive training in blockchain platforms and distributed ledger technologies.",
       skills: ["Blockchain", "Distributed Systems", "Smart Contracts"],
-      pdfUrl: "/certificates/blockchain-platforms.pdf",
-      thumbUrl: "/certificates/thumbs/blockchain-platforms.jpg",
+  pdfUrl: assetUrl("certificates/blockchain-platforms.pdf"),
+  thumbUrl: assetUrl("certificates/thumbs/blockchain-platforms.jpg"),
       verifyUrl: "https://coursera.org/verify/Q0NAN94GW2TT",
     },
     {
@@ -54,8 +55,8 @@ const Certificates = () => {
       description:
         "Mastered Agile project management methodologies and Jira workflow management.",
       skills: ["Agile", "Jira", "Project Management", "Scrum"],
-      pdfUrl: "/certificates/agile-jira.pdf",
-      thumbUrl: "/certificates/thumbs/agile-jira.jpg",
+  pdfUrl: assetUrl("certificates/agile-jira.pdf"),
+  thumbUrl: assetUrl("certificates/thumbs/agile-jira.jpg"),
       verifyUrl: "https://coursera.org/verify/2WQTHBZUJQNP",
     },
     {
@@ -65,8 +66,8 @@ const Certificates = () => {
       description:
         "Gained expertise in software implementation best practices and comprehensive testing strategies.",
       skills: ["Software Engineering", "Testing", "Quality Assurance", "Implementation"],
-      pdfUrl: "/certificates/software-engineering.pdf",
-      thumbUrl: "/certificates/thumbs/software-engineering.jpg",
+  pdfUrl: assetUrl("certificates/software-engineering.pdf"),
+  thumbUrl: assetUrl("certificates/thumbs/software-engineering.jpg"),
       verifyUrl: "https://coursera.org/verify/YR2IX6BVF3NQ",
     },
   ];
